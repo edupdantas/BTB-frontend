@@ -50,10 +50,8 @@ export default function Sala() {
                 cadeira.id === id ? { ...cadeira, selected: !cadeira.selected } : cadeira
             )
         );
-        console.log(cadeiras)
     };
 
-    console.log(cadeiras);
     function handleSubmit(e){
         e.preventDefault()
     }
