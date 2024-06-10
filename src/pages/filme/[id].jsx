@@ -12,6 +12,8 @@ export default function Sessao() {
     const router = useRouter();
     const [filme, setFilme] = useState(null);
     const [showFilme, setShowFilme] = useState(false)
+    const [indexData, setIndexData] = useState(null)
+    const [indexSala, setIndexSala] = useState(null)
     const [cadeiras, setCadeiras] = useState([
         {id: 1, occupied: true, selected: false},
         {id: 2, occupied: false, selected: false},
@@ -54,7 +56,9 @@ export default function Sessao() {
     }
 
     function submit(){
-        console.log(cadeiras)
+        let novoFilme = filme;
+        novoFilme.date[indexData].sala[indexSala] = cadeiras;
+        console.log(novoFilme)
     }
 
     function carregarFilme(idFilme) {
@@ -70,6 +74,13 @@ export default function Sessao() {
             carregarFilme(idFilme);
         }
     }, [router.query]);
+
+    function abrirDialog(data,sala){
+        setIndexData(data)
+        setIndexSala(sala)
+        setCadeiras(filme.date[data].sala[sala])
+        setShowFilme(true)
+    }
 
 
 
@@ -91,7 +102,7 @@ export default function Sessao() {
                             <div className="flex border rounded justify-between gap-3 px-2 py-0 items-center">
                                 <h1 className="text-2xl">dia 1</h1>
                                 <div className="flex gap-[100px] p-2">
-                                    <button className="bg-red-600 border rounded-lg text-lg p-2" onClick={()=> setShowFilme(true)}> Sala 01 00:00h</button>
+                                    <button className="bg-red-600 border rounded-lg text-lg p-2" onClick={()=> abrirDialog(indexData,indexSala)}> Sala 01 00:00h</button>
                                     <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 02 00:00h</button>
                                 </div>
                             </div>
