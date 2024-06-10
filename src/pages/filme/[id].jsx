@@ -54,7 +54,7 @@ export default function Sessao() {
     }
 
     function submit(){
-        console.log("acabou")
+        console.log(cadeiras)
     }
 
     function carregarFilme(idFilme) {
