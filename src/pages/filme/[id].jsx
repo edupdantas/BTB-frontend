@@ -56,9 +56,7 @@ export default function Sessao() {
     }
 
     function submit(){
-        let novoFilme = filme;
-        novoFilme.date[indexData].sala[indexSala] = cadeiras;
-        console.log(novoFilme)
+        console.log(cadeiras)
     }
 
     function carregarFilme(idFilme) {
@@ -75,10 +73,7 @@ export default function Sessao() {
         }
     }, [router.query]);
 
-    function abrirDialog(data,sala){
-        setIndexData(data)
-        setIndexSala(sala)
-        setCadeiras(filme.date[data].sala[sala])
+    function abrirDialog(){
         setShowFilme(true)
     }
 
