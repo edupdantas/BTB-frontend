@@ -1,6 +1,5 @@
 import {Dialog} from "primereact/dialog";
 import "@/app/globals.css"
-import {useState} from "react";
 import Cadeira from "@/components/Cadeira";
 
 export const DialogSala = ({title, open, close, obj, cadeiras,toggleCadeiras, submit, ...rest}) => {

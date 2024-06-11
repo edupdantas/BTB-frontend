@@ -1,9 +1,7 @@
 "use client";
 
-import Cadeira from "@/components/Cadeira";
-import {useContext, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import "@/app/globals.css";
-import api from "@/services/api";
 import {useRouter} from "next/router";
 import {DialogSala} from "@/components/DialogSala";
 
@@ -12,8 +10,6 @@ export default function Sessao() {
     const router = useRouter();
     const [filme, setFilme] = useState(null);
     const [showFilme, setShowFilme] = useState(false)
-    const [indexData, setIndexData] = useState(null)
-    const [indexSala, setIndexSala] = useState(null)
     const [cadeiras, setCadeiras] = useState([
         {id: 1, occupied: true, selected: false},
         {id: 2, occupied: false, selected: false},
@@ -91,7 +87,7 @@ export default function Sessao() {
                                  alt={filme.title}></img>
                             <div className="flex flex-col p-5 gap-5 items-start">
                                 <h1 className={"text-4xl"}>{filme.title}</h1>
-                                <span>{filme.title}</span>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
                             </div>
                         </div>
                         <div className="flex flex-col gap-5 p-3">
