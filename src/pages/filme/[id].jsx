@@ -74,6 +74,7 @@ export default function Sessao() {
     }, [router.query]);
 
     function abrirDialog(){
+        // setCadeiras(arrCadeiras)
         setShowFilme(true)
     }
 
@@ -97,22 +98,22 @@ export default function Sessao() {
                             <div className="flex border rounded justify-between gap-3 px-2 py-0 items-center">
                                 <h1 className="text-2xl">dia 1</h1>
                                 <div className="flex gap-[100px] p-2">
-                                    <button className="bg-red-600 border rounded-lg text-lg p-2" onClick={()=> abrirDialog(indexData,indexSala)}> Sala 01 00:00h</button>
-                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 02 00:00h</button>
+                                    <button className="bg-red-600 border rounded-lg text-lg p-2" onClick={()=> abrirDialog()}> Sala 01 14:00h</button>
+                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 02 18:00h</button>
                                 </div>
                             </div>
                             <div className="flex border rounded justify-between gap-3 px-2 py-0 items-center">
-                                <h1 className="text-2xl">dia 1</h1>
+                                <h1 className="text-2xl">dia 2</h1>
                                 <div className="flex gap-[100px] p-2">
-                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 01 00:00h</button>
-                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 02 00:00h</button>
+                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 01 18:00h</button>
+                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 02 16:00h</button>
                                 </div>
                             </div>
                             <div className="flex border rounded justify-between gap-3 px-2 py-0 items-center">
-                                <h1 className="text-2xl">dia 1</h1>
+                                <h1 className="text-2xl">dia 3</h1>
                                 <div className="flex gap-[100px] p-2">
-                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 01 00:00h</button>
-                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 02 00:00h</button>
+                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 01 12:00h</button>
+                                    <button className="bg-red-600 border rounded-lg text-lg p-2"> Sala 02 14:00h</button>
                                 </div>
                             </div>
                         </div>
